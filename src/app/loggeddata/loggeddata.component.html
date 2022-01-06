@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<br>
+<br>
+<div class="card" *ngFor="let item of blogs">
+    <p>
+        &nbsp; &nbsp;<img [src]="'http://localhost:4000/'+item.authorImage" alt="userImg" class="avatar"> &nbsp; &nbsp;
+        <a routerLink="/profile/{{item.userId}}" (click)="check(item.userId)">{{item.author}}</a>
+    </p>
+    <hr>
+    <a  routerLink="/blogs/{{item._id}}">
+        <img [src]="'http://localhost:4000/'+item.blogImage" alt="blogImg" ></a>
+   
+    <hr>
+    <div class="like">
+        <a routerLink="" class="like">
+            <span class="fa fa-heart-o fa-sm" aria-hidden="true" (click)="likeClick()"></span> {{numofLikes}} &nbsp;
+            <span routerLink="/comments" class="fa fa-comment-o fa-sm" aria-hidden="true" id="com"></span> {{item.comments.length}}&nbsp;
+            <span class="fa fa-share fa-sm" aria-hidden="true"></span> 0 &nbsp;
+        </a>
+    </div><br>
+    <div id="blog">
+        <a routerLink="/blogs/{{item._id}}">
+            <p>{{item.title}}</p>
+        </a>
+    </div>
+
+</div>
+<br>
+<br>

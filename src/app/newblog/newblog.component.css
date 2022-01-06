@@ -1,0 +1,44 @@
+:host {
+    background-color:whitesmoke;
+    display: block;
+   
+}
+
+label small {
+    color: #999;
+    font-weight: normal;
+}
+textarea {
+    resize: none;
+    border-radius: 10px;
+ }
+.choose::-webkit-file-upload-button , button{
+    color: white;
+    display: inline-block;
+    background:steelblue;
+    border: 1px solid steelblue;
+    padding: 7px 15px;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 10pt;
+    border-radius: 10px;
+  }
+  button :focus{
+      outline: none;
+  }
+
+  h2{
+      padding-top: 8px;
+  }
+
+  input{
+      border-radius: 10px;
+  }
+.container{
+    margin: 10px auto;
+}
+.row{
+    margin-top: 40px;
+}
+  
